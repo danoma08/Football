@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="football.css">
+	<script src="scripts/football.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Las Vegas Co-Ed Touch Football Group</title>
+	
+	<style>
+		#map {
+			width:80%;
+			height:400px;
+			position: relative;
+			left:150px;
+			
+		}
+	</style>
+	
+<script url="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+	<header>
+	
+		<div id="navBar">
+			<img src="Vegas Football Destressed.png" id="banner">
+			<nav class="navigation">
+				
+				<ul>
+					<li><a class="navlink" href="index.html">Home </a></li>
+					<li><a class="navlink" href="Contact.html">Contact Us </a></li>
+					
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<br><br><br><br>
+	
+	<div class="w3-content w3-display-container">
+	  <img class="mySlides" src="pic1.jpg" style="width:100%">
+	  <img class="mySlides" src="pic2.jpg" style="width:100%">
+	  <img class="mySlides" src="pic3.jpg" style="width:100%">
+	  <img class="mySlides" src="pic4.jpg" style="width:100%">
+
+	  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div><br><br>
+    <section id="aboutUs">
+	<h1 id="aboutUsHeading">About Us</h1>
+	<p>This group has been set up for those people who would like to get out of the house, meet some great new people, <br>and have a crap-ton amount of fun playing some good old American touch football. This group is open to all ages, <br>
+	physical conditions, and skill levels. This group is co-ed so that means ladies are both welcome 
+	and encouraged to come out. <br>This group is not for those who take the game too seriously as any who fight or show a pattern of hurting 
+	the game <br>will NOT be welcome in the future.</p><br><br>
+	</section>
+	<h3>Welcome to Las Vegas Co-Ed Touch Football</h3>
+	<img src="grouppic.jpg" id="groupPic" width="600" height="400">
+	<br><br>
+	<section>
+		
+	</section>
+	<div id="map"></div><br><br>
+	
+
+	<footer>
+		<p align="center">&#169 Las Vegas Co-Ed Football Group 2018</p>
+	</footer>
+	
+    <!-- Optional JavaScript -->
+	<script>
+		var slideIndex = 1;
+			showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+    
+	<script>
+
+		var map;
+		  function initMap() {
+			var myLatLng = {lat: 36.1025783, lng: -115.2124054};
+			
+			var map = new google.maps.Map(document.getElementById('map'), {
+			  center: myLatLng,
+			  zoom: 14
+			});
+		  
+		var marker = new google.maps.Marker({
+			  position: myLatLng,
+			  map: map,
+			  title: 'Frias Park'
+			});
+		  }
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgLeUBbeJIFoUX91agxGgneWFMCj_nP2o&callback=initMap"
+    async defer></script>
+	
+
+	<script type="text/javascript" src="jquery-3.2.0.js" ></script>
+  </body>  
+</html>
